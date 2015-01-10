@@ -9,21 +9,7 @@ app.config.from_object('config')
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'nickname': 'Miguel'}
-    posts = [
-        {
-            'author': {'nickname': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'nickname': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html',
-                           title='Home',
-                           user=user,
-                           posts=posts)
+    return render_template('index.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -42,7 +28,7 @@ def login():
 @app.errorhandler(404)
 def page_404(e):
     """Return a custom 404 error."""
-    return 'Sorry, Nothing at this URL.', 404
+    return 'Sorry, nothing at this URL.', 404
 
 
 @app.errorhandler(500)

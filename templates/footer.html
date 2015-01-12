@@ -1,0 +1,30 @@
+{% from "base.html" import title %}
+{% macro social(title, url) %}
+<li><a href="{{ url }}"><i class="fa fa-{{ title }}"></i></a></li>
+{% endmacro %}
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; {{ title }} 2015</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          {{ social("twitter", "http://twitter.com/jekyllrb") }}
+          {{ social("facebook", "#") }}
+          {{ social("stack-overflow", "http://stackoverflow.com/questions/tagged/jekyll") }}
+          {{ social("bitbucket", "http://bitbucket.org/jekyll") }}
+          {{ social("github", "http://github.com/jekyll") }}
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li><a href="#">Privacy Policy</a>
+          </li>
+          <li><a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

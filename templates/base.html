@@ -1,23 +1,23 @@
+{% set baseurl = '' %}
+{% set title = "Trevor & Emily" %}
+<!DOCTYPE html>
 <html>
-  <head>
-    {% if title %}
-    <title>{{ title }} - microblog</title>
-    {% else %}
-    <title>microblog</title>
-    {% endif %}
-  </head>
-  <body>
-    <div>Microblog: <a href="/index">Home</a></div>
-    <hr>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul>
-    {% for message in messages %}
-        <li>{{ message }} </li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+
+  {% include "head.html" %}
+
+  <body id="page-top" class="index">
+
     {% block content %}{% endblock %}
+
+    {% block javascript %}
+    <script src="{{ baseurl ~ "/static/js/jquery-1.11.0.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/bootstrap.min.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/jquery.easing.min.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/classie.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/cbpAnimatedHeader.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/jqBootstrapValidation.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/contact_me.js" }}"></script>
+    <script src="{{ baseurl ~ "/static/js/agency.js" }}"></script>
+    {% endblock %}
   </body>
 </html>

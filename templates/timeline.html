@@ -1,0 +1,29 @@
+{% macro event() %}
+<div class="timeline-block">
+  <div class="timeline-img picture">
+    <img src="/static/img/icon-picture.svg" alt="Picture">
+  </div>
+
+  <div class="timeline-content">
+    <h2>Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+    <a href="#0" class="read-more">Read more</a>
+    <span class="timeline-datetime">Jan 14</span>
+  </div>
+</div>
+{% endmacro %}
+<section id="timeline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{ event() }}
+        {{ event() }}
+        {{ event() }}
+        {{ event() }}
+        {{ event() }}
+        {{ event() }}
+        {{ event() }}
+      </div>
+    </div>
+  </div>
+</section>

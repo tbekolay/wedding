@@ -6,7 +6,18 @@
   {% include "info.html" %}
   {% include "timeline.html" %}
   {% include "logistics.html" %}
+  {% include "rsvp.html" %}
   {% include "thanks.html" %}
-  {% include "rsvp-link.html" %}
   {% include "footer.html" %}
+{% endblock %}
+
+{% block extrajs %}
+{% if just_submitted %}
+<script type="text/javascript">
+  $(window).load(function() {
+      $('html, body').animate({
+          scrollTop: $('#rsvp').offset().top}, 0);
+  });
+</script>
+{% endif %}
 {% endblock %}

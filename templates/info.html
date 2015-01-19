@@ -1,5 +1,5 @@
 {% macro fact(number, unit, text) %}
-<div class="col-md-4">
+<div class="fact clearfix">
   <span class="fa-stack fa-4x">
     <i class="fa fa-circle fa-stack-2x text-primary"></i>
     <strong class="fa fa-stack-1x fa-inverse info-circle">{{ number }}</strong>
@@ -16,8 +16,39 @@
       </div>
     </div>
     <div class="row text-center">
-      {{ fact('4', 'things', 'heeey') }}
-      {{ fact('8', 'other things', 'Cool') }}
+      <div class="col-sm-4">
+        <h3>Emily</h3>
+        {{ fact("25", "years old", "") }}
+        {{ fact("4", "siblings", "") }}
+        {{ fact("9.25", "lbs", "at birth") }}
+        {{ fact("17", "times moved", "across 9 cities") }}
+        {{ fact("0", "broken bones", "") }}
+        {{ fact("8", "shoe size", "24.6 cm") }}
+        {{ fact("-1.75", "glasses prescription", "") }}
+        {{ fact("81", "mark in grade 9 science", "") }}
+        {{ fact("7.60", "hourly wage of first job", "") }}
+      </div>
+      <div class="col-sm-4">
+        <h3>Trevor</h3>
+        {{ fact("29", "years old", "") }}
+        {{ fact("1", "sibling", "") }}
+        {{ fact("7.3", "lbs", "at birth") }}
+        {{ fact("17", "times moved", "across 9 cities") }}
+        {{ fact("2", "broken bones", "both feet!") }}
+        {{ fact("9.5", "shoe size", "26.7 cm") }}
+        {{ fact("-9.5", "glasses prescription", "") }}
+        {{ fact("95", "mark in grade 9 science", "") }}
+        {{ fact("7.50", "hourly wage of first job", "") }}
+      </div>
+      <div class="col-sm-4">
+        <h3>Emily & Trevor</h3>
+        {{ fact("3", "years old", "") }}
+        {{ fact("5", "siblings", "combined") }}
+        {{ fact("292", "lbs", "now (combined)") }}
+        {{ fact("7", "countries visited", "together") }}
+        {# fact("2", "broken bones", "both Trevor!") #}
+        {# fact("?", "Megabus trips", "roundtrip Toronto-Montreal or Montreal-Toronto" gmail: from megabus your reservations have been made ) #}
+      </div>
     </div>
   </div>
 </section>

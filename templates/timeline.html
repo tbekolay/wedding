@@ -1,14 +1,12 @@
-{% macro event() %}
+{% macro event(title, datetime, text, img="icon-picture.svg") %}
 <div class="timeline-block">
   <div class="timeline-img picture">
-    <img src="/static/img/icon-picture.svg" alt="Picture">
+    <img src="/static/img/{{ img }}" alt="">
   </div>
-
   <div class="timeline-content">
-    <h2>Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-    <a href="#0" class="read-more">Read more</a>
-    <span class="timeline-datetime">Jan 14</span>
+    <h2>{{ title }}</h2>
+    <span class="timeline-datetime">{{ datetime }}</span>
+    <p>{{ text }}</p>
   </div>
 </div>
 {% endmacro %}
@@ -16,13 +14,22 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        {{ event() }}
-        {{ event() }}
-        {{ event() }}
-        {{ event() }}
-        {{ event() }}
-        {{ event() }}
-        {{ event() }}
+        {{ event("Trevor comes into existence", "April 7, 1985", "Thanks, Cathy and Dave!") }}
+        {{ event("Emily comes into existence", "June 13, 1989", "Thanks, Candia and Ron!") }}
+        {{ event("Some stuff", "1989 - Sept. 2011", "Mostly unimportant.") }}
+        {{ event("BIOL 678", "Sept. 2011", "Trevor was looking to learn more about experimental neuroscience. Emily was looking to learn about grad school and graduate-level classes. They first got to know each other through the interactions in the class, as it was very presentation and discussion-based. It wasn't until the end of November, with just a couple more weeks of class left, that Trevor asked Emily out for coffee.") }}
+        {{ event("Committed", "8:15am, January 23, 2012", "They knew they were committed to each other by the end of January, when they first admitted they were in love on a cold morning following a breakfast date.") }}
+        {{ event("Long distance for the first time", "4pm, January 23, 2012", " Emily then left to interview at McGill University in Montreal, so they spent that long weekend in anticipation, wanting to be able to talk about their commitment!") }}
+        {{ event("Trip to Goderich", "April, 2012", "They went away together for a long weekend before Trevor's move to New Haven and Emily's move to Montreal. Together, they relaxed for the first time in a long time with classes and exams finally finished! They explored the tornado-stricken city, touched Lake Huron, and forged a stream on an unintentional trail-hike!") }}
+        {{ event("Moving apart", "April, 2012", "Their relationship was tested shortly after the trip when they helped each other pack to move; Trevor was off to New Haven for a summer position at Yale, and Emily was off to Montreal to begin her master's degree. Closet skeletons were found and accepted.") }}
+        {{ event("First Christmas together", "December, 2012", "Coincidentally, also their first flight together. They spent Christmas Eve in Toronto with Emily's family before a very early morning flight Christmas day to celebrate with Trevor's family in Winnipeg.") }}
+        {# event("Engagement", "September, 2014", "After two years living in different cities, with Trevor spending as much time as possible in Montreal with Emily, they decided to move in together when Emily moved back to Waterloo in the fall. After seeing over twelve apartments, they chose their current abode on Erb to call home.") #}
+        {{ event("Moving in together", "September, 2014", "After two years living in different cities, with Trevor spending as much time as possible in Montreal with Emily, they decided to move in together when Emily moved back to Waterloo in the fall. After seeing over twelve apartments, they chose their current abode on Erb to call home.") }}
+        {{ event("Wedding ceremony", "11 am, February 17, 2015", "Emily and Trevor will finally be married at a ceremony at the Grad House, officiated by Mari Sargent.") }}
+        {{ event("Wedding reception", "Noon, February 17, 2015", "Emily, Trevor, and their guests will have a lunch reception to celebrate their flawless wedding ceremony.") }}
+        {{ event("Emily & Trevor get inked", "3:30 pm, February 17, 2015", "Since it's difficult to always wear their rings, Emily and Trevor will be getting a tattoo version of their wedding rings.") }}
+        {{ event("Honeymoon", "February 18, 2015 - ???", "They head to Deerhurst resort in Hunstville, ON for their honeymoon. Their plans include skating on the 1.5 km skating trail at Arrowhead Provincial Park!") }}
+        {{ event("Off to Dartmouth", "July, 2015", "Trevor & Emily are off to Dartmouth College, where Emily will start her PhD in the van der Meer lab, and Trevor will finish his PhD dissertation.") }}
       </div>
     </div>
   </div>

@@ -1,0 +1,61 @@
+{% macro textarea_q(id, placeholder=None, label=None, large=False, required=False) %}
+<div class="form-group">
+  {% if label %}<p{% if large %} class="large"{% endif %}>{{ label }}</p>{% endif %}
+  <textarea class="form-control"{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}{% if required %} required{% endif %} name="{{ id }}"></textarea>
+  <p class="help-block text-danger"></p>
+</div>
+{% endmacro %}
+
+{% macro text_q(id, placeholder=None, label=None) %}
+<div class="form-group">
+  {% if label %}<p>{{ label }}</p>{% endif %}
+  <input type="text" class="form-control"{% if placeholder %} placeholder="{{ placeholder }}"{% endif %} name="{{ id }}">
+  <p class="help-block text-danger"></p>
+</div>
+{% endmacro %}
+
+{% macro radio_q_inl(name, options, values, center=False) %}
+<div class="form-group">
+  <div class="radio{% if center %} text-center{% endif %}">
+    {% for option, val in zip(options, values) %}
+    <label class="radio-inline">
+      <input type="radio" name="{{ name }}" id="{{ name }}-{{ loop.index }}" value="{{ val }}"> {{ option }}
+    </label>
+    {% endfor %}
+  </div>
+  <p class="help-block text-danger"></p>
+</div>
+{% endmacro %}
+
+{% macro radio_q(name, options, values, prompt=None) %}
+<div class="form-group">
+  {% if prompt %}<p>{{ prompt }}</p>{% endif %}
+  {% for option, val in zip(options, values) %}
+  <div class="radio">
+    <label>
+      <input type="radio" name="{{ name }}" id="{{ name }}-{{ loop.index }}" value="{{ val }}"> {{ option }}
+    </label>
+  </div>
+  {% endfor %}
+  <p class="help-block text-danger"></p>
+</div>
+{% endmacro %}
+
+{% macro select_q(id, options, label=None) %}
+<div class="form-group">
+  {% if label %}<p>{{ label }}</p>{% endif %}
+  <select class="form-control" name="{{ id }}">
+    {% for option in options %}
+    <option>{{ option }}</option>
+    {% endfor %}
+  </select>
+</div>
+{% endmacro %}
+
+{% macro number_q(id, label) %}
+<div class="form-group">
+  <label class="inline" for={{ id }}>{{ label }}</label>
+  <input type="input" class="form-control inline" name="{{ id }}">
+  <p class="help-block text-danger"></p>
+</div>
+{% endmacro %}

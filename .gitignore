@@ -1,5 +1,11 @@
+# Website
 *.pyc
-# don't include third-party dependencies.
-lib/
-!lib/README.md
+website/lib/
+!website/lib/README.md
 .DS_Store
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.pdf

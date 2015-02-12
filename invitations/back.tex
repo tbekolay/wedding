@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[paperwidth=10.8cm, paperheight=14.0cm, margin=1cm]{geometry}
+\usepackage{back}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{microtype}
+
+\renewenvironment{abstract}
+ {\normalsize
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{%
+    \setlength{\leftmargin}{5mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+\title{Our wedding}
+
+\author{
+  Trevor W. Bekolay \\
+  \texttt{tbekolay@gmail.com} \\
+  \And
+  Emily M. Irvine \\
+  \texttt{emilymirvine@gmail.com} \\
+  \AND
+  \textmd{at} The Graduate House \\
+  University of Waterloo \\
+  11 am -- 3 pm \thanks{Please RSVP at \url{http://wedding.bekolay.org/}}
+}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\maketitle
+
+\vspace{-2.5em}
+\begin{abstract}
+  In this ceremony, we present a new family,
+  which extends the existing Bekolay and Irvine families
+  with a new lifelong partnership, between Trevor and Emily.
+  We will show, through a ceremony commencing at 11 am,
+  followed directly by a lunch reception,
+  that this new family will significantly improve the lives
+  of all participants ($p < 0.001$).
+\end{abstract}
+
+\end{document}

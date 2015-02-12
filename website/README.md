@@ -1,5 +1,5 @@
-Trevor & Emily wedding website
-==============================
+wedding.bekolay.org
+===================
 
 Design based on
 [IronSummitMedia/startbootstrap-agency](https://github.com/IronSummitMedia/startbootstrap-agency).

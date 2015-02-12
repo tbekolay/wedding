@@ -1,0 +1,63 @@
+\documentclass{sign}
+
+%% \usepackage[rm]{roboto}
+\usepackage[sfdefault]{cabin}
+%% \usepackage{librecaslon}
+%% \usepackage[urw-garamond]{mathdesign}
+%% \usepackage{LobsterTwo}
+
+\usepackage[T1]{fontenc}
+%% \newcommand{\timeline}[2]{
+%%   \begin{center}
+%%     $\sim$ \textit{#1} $\sim$ \\
+%%     #2
+%%   \end{center}}
+
+\newcommand{\timeline}[2]{
+  \item[\textsl{#1}] \hfill \\ #2}
+
+\begin{document}
+
+\hfil{\Huge\bf Trevor \& Emily}\hfil
+\bigskip\break % Whitespace
+\hrule % Horizontal line
+
+\vfil % Vertically center content
+
+\makebox[\textwidth][c]{\begin{minipage}{0.6\textwidth}
+  \begin{description}
+  \timeline{11:00 am, upstairs}{%
+    Wedding ceremony officiated by Mari Sargent. \\
+    Readings by Jason Bekolay \& Alex Irvine.}
+
+  \timeline{11:30 am, upstairs}{Photography by Pete May}
+
+  \timeline{11:30 am, main floor}{Reception begins.}
+
+  \timeline{12:00 pm, main floor}{Lunch is served, catered by the Grad House.}
+
+  \timeline{12:45 pm, main floor}{%
+    Speeches by Chris Eliasmith, Jennifer Beggs, \\
+    Michelle Irvine, and Cathy \& Dave Bekolay.}
+
+  \timeline{1:15 pm, main floor}{Dessert is served.}
+
+  \timeline{3:00 pm}{Reception ends.}
+  \end{description}
+
+\end{minipage}}
+
+\vfil % Vertically center content
+
+\hrule
+
+\textbf{Bathrooms} are available on the main floor,
+to the right of the bar.
+
+A \textbf{coat room} is available upstairs
+at the back of the room.
+
+There is a \textbf{guestbook} on the main floor.
+Please sign it at some point today!
+
+\end{document}

@@ -9,6 +9,7 @@ Specifically, it contains:
 
 - `/ceremony`: The text for the wedding ceremony
 - `/invitations`: The source for both sides of our invitation
+- `/signs`: The source for signs put up at the venue
 - `/website`: The source for our website, currently hosted
   at [wedding.bekolay.org](http://wedding.bekolay.org/)
 

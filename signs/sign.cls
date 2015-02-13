@@ -3,6 +3,8 @@
 \LoadClass[12pt]{article}
 
 \usepackage[letterpaper,hmargin=0.79in,vmargin=0.79in]{geometry}
+\usepackage[rm]{roboto}
+\usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage[parfill]{parskip} % Do not indent paragraphs
 

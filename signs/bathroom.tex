@@ -1,0 +1,61 @@
+\documentclass{sign}
+
+\newif\ifleft
+
+\lefttrue  % Arrow facing left
+%% \leftfalse  % Arrow facing right
+
+\geometry{landscape}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+
+\begin{center}
+  \ifleft
+      {\fontsize{42pt}{1em}\bf Emily \& Trevor} \\
+  \else
+      {\fontsize{42pt}{1em}\bf Trevor \& Emily} \\
+  \fi
+  {February 17, 2015}
+\end{center}
+\bigskip % Whitespace
+
+\hrule % Horizontal line
+
+\vfill
+
+\begin{center}
+  {\fontsize{72pt}{1em}\bf Bathrooms}
+
+  \vspace{6em}
+
+  \begin{tikzpicture}
+    \ifleft
+    \draw[
+      -triangle 90,
+      line width=6mm,
+      postaction={draw, line width=1.8cm, shorten >=1cm, -}
+    ] (5,0) -- (0,0);
+    \else
+    \draw[
+      -triangle 90,
+      line width=6mm,
+      postaction={draw, line width=1.8cm, shorten >=1cm, -}
+    ] (0,0) -- (5,0);
+    \fi
+  \end{tikzpicture}
+\end{center}
+
+\vfill
+
+\hrule
+
+A \textbf{coat room} is available upstairs
+at the back of the room.
+
+There is a \textbf{guestbook} on the main floor.
+Please sign it at some point today!
+
+\end{document}

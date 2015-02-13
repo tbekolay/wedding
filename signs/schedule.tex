@@ -1,36 +1,36 @@
 \documentclass{sign}
 
-%% \usepackage[rm]{roboto}
-\usepackage[sfdefault]{cabin}
-%% \usepackage{librecaslon}
-%% \usepackage[urw-garamond]{mathdesign}
-%% \usepackage{LobsterTwo}
+\newif\ifte
 
-\usepackage[T1]{fontenc}
-%% \newcommand{\timeline}[2]{
-%%   \begin{center}
-%%     $\sim$ \textit{#1} $\sim$ \\
-%%     #2
-%%   \end{center}}
+\tetrue  % Trevor & Emily
+%% \tefalse  % Emily & Trevor
 
 \newcommand{\timeline}[2]{
   \item[\textsl{#1}] \hfill \\ #2}
 
 \begin{document}
 
-\hfil{\Huge\bf Trevor \& Emily}\hfil
-\bigskip\break % Whitespace
+\begin{center}
+  \ifte
+      {\fontsize{42pt}{1em}\bf Trevor \& Emily} \\
+  \else
+      {\fontsize{42pt}{1em}\bf Emily \& Trevor} \\
+  \fi
+  {February 17, 2015}
+\end{center}
+\bigskip % Whitespace
+
 \hrule % Horizontal line
 
-\vfil % Vertically center content
+\vfill
 
 \makebox[\textwidth][c]{\begin{minipage}{0.6\textwidth}
   \begin{description}
   \timeline{11:00 am, upstairs}{%
     Wedding ceremony officiated by Mari Sargent. \\
-    Readings by Jason Bekolay \& Alex Irvine.}
+    Readings by Jason Bekolay \& Alexandra Irvine.}
 
-  \timeline{11:30 am, upstairs}{Photography by Pete May}
+  \timeline{11:30 am, upstairs}{Photography by Pete May.}
 
   \timeline{11:30 am, main floor}{Reception begins.}
 
@@ -47,7 +47,7 @@
 
 \end{minipage}}
 
-\vfil % Vertically center content
+\vfill
 
 \hrule
 

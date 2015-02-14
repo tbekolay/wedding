@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from google.appengine.ext import ndb
 
 app = Flask(__name__)
@@ -75,6 +75,19 @@ def index():
             setattr(rsvp, key.replace('-', '_'), val)
         rsvp.put()
     return render_template('index.html', just_submitted=just_submitted)
+
+
+@app.route('/aitooh7raoG.csv')
+def getcsv():
+    dicts = []
+    all_rsvps = RSVP.query().fetch(30)
+    for rsvp in all_rsvps:
+        dicts.append(rsvp.to_dict())
+
+    keys = sorted(list(dicts[0]))
+    rows = [u','.join(u'"%s"' % unicode(d[k]) for k in keys) for d in dicts]
+    return Response(unicode(keys).strip('[]') + '\n' + '\n'.join(rows),
+                    mimetype="text/csv")
 
 
 @app.errorhandler(404)

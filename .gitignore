@@ -9,3 +9,7 @@ website/lib/
 *.log
 *.out
 *.pdf
+
+# IPython
+.ipynb_checkpoints/
+*.csv

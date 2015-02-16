@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>RSVP Results</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>RSVP Results</h1>
+          <p><a href="http://wedding.bekolay.org/#rsvp">wedding.bekolay.org/#rsvp</a></p>
+        </section>
+        <section>
+          <h2>Demographics</h2>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/age.svg" width="100%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/siblings.svg" width="100%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/places.svg" width="100%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/bones.svg" width="100%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/wage.svg" width="100%"></object>
+        </section>
+        <section>
+          <h2>Preferences</h2>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/receive.svg" width="45%"></object>
+          <object type="image/svg+xml" data="img/rsvp/give.svg" width="45%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/temp.svg" width="100%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/cardgame.svg" width="45%"></object>
+          <object type="image/svg+xml" data="img/rsvp/carname.svg" width="45%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/accommodation.svg" width="45%"></object>
+          <object type="image/svg+xml" data="img/rsvp/timeofday.svg" width="45%"></object>
+        </section>
+        <section>
+          <object type="image/svg+xml" data="img/rsvp/wine.svg" width="28%"></object>
+          <object type="image/svg+xml" data="img/rsvp/beverage.svg" width="28%"></object>
+          <br>
+          <object type="image/svg+xml" data="img/rsvp/bread.svg" width="28%"></object>
+          <object type="image/svg+xml" data="img/rsvp/cake.svg" width="28%"></object>
+        </section>
+        <section>
+          <h2>Coincidence?</h2>
+        </section>
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>...</th>
+                <th>Card game</th>
+                <th>Car name</th>
+                <th>...</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3</td>
+                <td>...</td>
+                <td>Euchre</td>
+                <td>Otto</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>...</td>
+                <td>Euchre</td>
+                <td>Otto</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h1>Thank you!</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        touch: false,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,160 +1,5 @@
-{% import "form_elements.html" as f %}
 <section id="rsvp">
   <div class="container rsvp-bg">
-    {% if not just_submitted %}
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">RSVP</h2>
-        <h5>Please allot 15 minutes to fill this out fully.</h5>
-        <h5>Your answers may be used (anonymously) in a speech!</h5>
-        <hr>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <form name="rsvp" id="rsvp-form" action="/" method="POST">
-          <div class="row">
-
-            <div class="step" data-state="married">
-              <div class="col-md-6">
-                {{ f.text_q("name", placeholder="Your name") }}
-                {{ f.text_q("partner", placeholder="Your partner's name (optional)") }}
-                {{ f.radio_q_inl("married", ["Married", "Not married"], ["True", "False"], center=True) }}
-              </div>
-              <div class="col-md-6">
-                {{ f.radio_q("coming", ["Yes, definitely!", "Unfortunately no"], ["True", "False"], prompt="Will you be able to join us on February 17?") }}
-              </div>
-            </div>
-
-            <div class="step" id="married" data-state="impression">
-              <div class="col-md-12">
-                {{ f.textarea_q("marriage-advice", label="We're curious! What would you like to have known before getting married?", large=True) }}
-              </div>
-            </div>
-
-            <div class="step" id="not-married" data-state="impression">
-              <div class="col-md-12">
-                {{ f.textarea_q("marriage-observations", label="What is something that you see in successful married couples that we should try to emulate?", large=True) }}
-              </div>
-            </div>
-
-            <div class="step" id="impression">
-              <div class="col-md-12">
-                {{ f.textarea_q("impression", label="What was your first impression of Trevor (if you've known Emily longer) or Emily (if you've known Trevor longer)?") }}
-              </div>
-            </div>
-
-            <div class="step" id="short-qs">
-              <div class="col-md-6">
-                <h5 class="text-center">About you</h5>
-                <p class="large">What is...</p>
-                {{ f.text_q("card-game", "52 card pickup", "your favourite card game?") }}
-                {{ f.text_q("tradition", "Camping, games nights, ...", "a family tradition you look forward to?") }}
-                {{ f.text_q("temperature", "-40 Celsius", "the ideal (indoor) temperature?") }}
-              </div>
-              <div class="col-md-6">
-                <h5 class="text-center">About us</h5>
-                <p class="large">What should we...</p>
-                {{ f.text_q("car-name", "Dr. Car", "name our first car?") }}
-                {{ f.text_q("next-country", "Canada", "choose as a destination for our next trip together?") }}
-                {{ f.text_q("book-recommend", "Wild Animus: A Novel", "read next?") }}
-              </div>
-            </div>
-
-            <div class="step" data-state="affection">
-              <div class="col-md-12">
-                <p class="large">It's been said that there are five main ways that we give and receive affection.</p>
-                <ul>
-                  <li><strong>Words of affirmation</strong>: saying / hearing nice things.</li>
-                  <li><strong>Act of service</strong>: doing nice things or having nice things done for you.</li>
-                  <li><strong>Gifts</strong></li>
-                  <li><strong>Quality time</strong></li>
-                  <li><strong>Physical touch</strong></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                {{ f.select_q("my-receive-affection", ["Prefer not to say", "Words of affirmation", "Acts of service", "Gifts", "Quality time", "Physical touch"], "How do you prefer to receive affection?") }}
-              </div>
-              <div class="col-md-6">
-                {{ f.select_q("my-give-affection", ["Prefer not to say", "Words of affirmation", "Acts of service", "Gifts", "Quality time", "Physical touch"], "How do you prefer to give affection?") }}
-              </div>
-            </div>
-
-            <div class="step" id="partner-affection">
-              <div class="col-md-12">
-                <p class="large">It's been said that there are five main ways that we give and receive affection.</p>
-                <ul>
-                  <li><strong>Words of affirmation</strong>: saying / hearing nice things.</li>
-                  <li><strong>Act of service</strong>: doing nice things or having nice things done for you.</li>
-                  <li><strong>Gifts</strong></li>
-                  <li><strong>Quality time</strong></li>
-                  <li><strong>Physical touch</strong></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                {{ f.select_q("partner-receive-affection", ["Prefer not to say", "Words of affirmation", "Acts of service", "Gifts", "Quality time", "Physical touch"], "How does your partner prefer to receive affection?") }}
-              </div>
-              <div class="col-md-6">
-                {{ f.select_q("partner-give-affection", ["Prefer not to say", "Words of affirmation", "Acts of service", "Gifts", "Quality time", "Physical touch"], "How does your partner prefer to give affection?") }}
-              </div>
-            </div>
-
-            <div class="step" id="mcq">
-              <div class="col-md-12 text-center">
-                <h5>Demographics</h5>
-                <p>Please answer to the best of your ability, or leave blank any that you're not comfortable answering.</p>
-              </div>
-              <div class="col-md-6">
-                {{ f.number_q("age", "Age") }}
-                {{ f.number_q("siblings", "# of siblings") }}
-                {{ f.number_q("places-lived", "# of places lived") }}
-                {{ f.number_q("cities-lived", "# of cities lived") }}
-                {{ f.number_q("broken-bones", "# of broken bones") }}
-                {{ f.number_q("shoe-size", "Shoe size") }}
-              </div>
-              <div class="col-md-6">
-                {{ f.number_q("glasses", "Glasses prescription") }}
-                {{ f.number_q("science-grade", "Mark in grade 9 science") }}
-                {{ f.number_q("wage", "Hourly wage of first job") }}
-                {{ f.radio_q("morning-night", ["morning person", "night person"], ["morning", "night"], "Are you a...") }}
-                {{ f.radio_q("accomodation", ["camp", "stay in a hotel", "stay in an AirBnB, hostel, etc."], ["camp", "hotel", "hostel"], "Would you rather...") }}
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="col-md-12 text-center">
-                <h5>Food & drink</h5>
-                <p>Last one! No promises that your preferences here will be taken into account (lunch will be buffet style), but we'll do our best!</p>
-              </div>
-              <div class="col-md-6">
-                {{ f.radio_q_inl("wine", ["White wine", "Red wine"], ["white", "red"]) }}
-                {{ f.radio_q_inl("hot-beverage", ["Coffee", "Tea", "Hot chocolate"], ["coffee", "tea", "hot-chocolate"]) }}
-                {{ f.radio_q_inl("cake", ["Vanilla cake", "Chocolate cake"], ["vanilla", "chocolate"]) }}
-                {{ f.radio_q_inl("bread", ["White bread", "Brown bread"], ["white", "brown"]) }}
-              </div>
-              <div class="col-md-6">
-                {{ f.text_q("allergies", label="Do you have any allergies or other dietary restrictions? We promise we'll take this into account!") }}
-              </div>
-            </div>
-
-            <div class="step submit" id="other-comments">
-              <div class="col-md-12">
-                {{ f.textarea_q("other", label="Thanks for your patience! If you have any other comments or questions, please leave them below.", large=True) }}
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center navigation">
-            <div id="progressbar"></div>
-            <div id="success"></div>
-            <button type="button" name="backward" class="btn btn-primary backward">Previous</button>
-            <button type="button" name="forward" class="btn btn-primary forward">Next</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    {% elif just_submitted %}
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Thank you for RSVPing!</h2>
@@ -163,15 +8,15 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <p class="large">If you wish to change any of your responses to the RSVP form, please feel free to fill out the form again and we'll use your last submission.</p>
-        <p>Be sure to read through the <a class="page-scroll" href="#logistics">logistics</a> section! A few brief reminders:</p>
-        <ul class="text-left">
-          <li>Dress warmly! We'll provide a place for coats and bags.</li>
-          <li>We won't have a place for gifts; gifts are neither necessary nor expected.</li>
-        </ul>
+        <p class="large">
+          We used the results of the RSVP form to create
+          <a href="/static/results.html">a slideshow</a>
+          giving some idea of the statistical makeup
+          of the attendees of the wedding.
+          Press the left and right arrow keys to
+          switch between each slides!
+        </p>
       </div>
     </div>
-    {% endif %}
   </div>
-
 </section>

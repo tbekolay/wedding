@@ -41,7 +41,7 @@ Run locally
 To run the project locally, do
 
 ```console
-dev_appserver.py
+dev_appserver.py .
 ```
 
 and then visit <http://localhost:8080>.

@@ -953,6 +953,12 @@ section#rsvp .text-danger {
     color: #e74c3c;
 }
 
+section#photos iframe {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #progressbar {
     margin-left: auto;
     margin-right: auto;
